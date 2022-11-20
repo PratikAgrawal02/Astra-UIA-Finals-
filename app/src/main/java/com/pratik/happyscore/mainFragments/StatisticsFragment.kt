@@ -52,6 +52,26 @@ class StatisticsFragment : Fragment() {
         setSugarPP(splitParts[2], splitParts)
         setCholesterol(splitParts[3], splitParts)
 
+        val plateletlist: ArrayList<Int> = arrayListOf(210,200,300,240,120,340)
+        binding.platelets.setData(plateletlist)
+        binding.plateleteRange.text = "Min: 120, Max: 340"
+
+        val altlist: ArrayList<Int> = arrayListOf(24,25,12,34,20,30)
+        binding.alt.setData(altlist)
+        binding.altRange.text = "Min: 1.2, Max: 3.4"
+
+
+        val astlist: ArrayList<Int> = arrayListOf(340,120,240,300,200,210)
+        binding.ast.setData(astlist)
+        binding.astRange.text = "Min: 2.1, Max: 3.4"
+
+        val alplist: ArrayList<Int> = arrayListOf(210,200,300,240,120,340)
+        binding.alp.setData(alplist)
+        binding.astRange.text = "Min: 120, Max: 340"
+
+
+
+
         return binding.root
     }
 

@@ -75,7 +75,7 @@
             app:ss_leftIcon="@drawable/person"
             app:ss_leftText="Patient"
             app:ss_rightIcon="@drawable/doctor"
-            app:ss_rightText="Expert"
+            app:ss_rightText="Doctor"
             app:ss_selectedTextSize="18sp"
             app:ss_sliderBackgroundColor="@color/black"
             app:ss_switchColor="@color/light_blue"

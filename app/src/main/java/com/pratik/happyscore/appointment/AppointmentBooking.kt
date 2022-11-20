@@ -127,6 +127,9 @@ class AppointmentBooking : AppCompatActivity() {
                 appointmentD["PatientCondition"] = situation
                 appointmentD["Prescription"] = userPrescription
                 appointmentD["TotalPoints"] = totalPoint.toString().trim()
+                appointmentD["DoctorUID"] = doctorUid.toString()
+                appointmentD["PatientUID"] = userid
+
 
                 val appointmentP : HashMap<String, String> = HashMap() //define empty hashmap
                 appointmentP["DoctorUID"] = doctorUid.toString()
@@ -159,6 +162,7 @@ class AppointmentBooking : AppCompatActivity() {
         val items: List<String> = mapOfDiseasesList[doctorType]!!
         val adapter = ArrayAdapter(this, R.layout.list_items, items)
         binding.diseaseDropdown.setAdapter(adapter)
+
 
         // Situation List
         val situationItems = listOf("Severe Pain", "Mild Pain", "No Pain")

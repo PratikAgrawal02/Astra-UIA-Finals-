@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/home">
+    app:startDestination="@id/symptom">
 
     <fragment
         android:id="@+id/home"
@@ -30,4 +30,9 @@
         android:name="com.pratik.happyscore.mainFragments.ReminderFragment"
         android:label="fragment_reminder"
         tools:layout="@layout/fragment_reminder" />
+    <fragment
+        android:id="@+id/symptom"
+        android:name="com.pratik.happyscore.mainFragments.SymptomScore"
+        android:label="fragment_symptom_score"
+        tools:layout="@layout/fragment_symptom_score" />
 </navigation>

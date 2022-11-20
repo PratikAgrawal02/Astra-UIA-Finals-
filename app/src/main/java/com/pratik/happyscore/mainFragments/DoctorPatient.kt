@@ -93,7 +93,6 @@ class DoctorPatient : AppCompatActivity() {
     private fun getData(date: String, userID: String) {
 
         dbref = FirebaseDatabase.getInstance().getReference("Doctor").child(userID).child("DoctorsAppointments").child(date).orderByChild("TotalPoints")
-
         dbref.addValueEventListener(object : ValueEventListener {
             @SuppressLint("NotifyDataSetChanged")
             override fun onDataChange(snapshot: DataSnapshot) {

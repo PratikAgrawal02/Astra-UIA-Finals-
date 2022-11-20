@@ -39,7 +39,6 @@ RecyclerView.Adapter<PatientAppointmentAdapter.PatientAppointmentViewHolder>(){
         holder.date.text = date
 
         holder.itemView.setOnClickListener {
-            /**set Data*/
             val mIntent = Intent(c, DoctorPatient::class.java)
             mIntent.putExtra("uid", uid)
             mIntent.putExtra("date", date)

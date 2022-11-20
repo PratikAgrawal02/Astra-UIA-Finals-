@@ -62,7 +62,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        TSS()
+        //TSS()
 
         firebaseAuth = FirebaseAuth.getInstance()
         val user = firebaseAuth.currentUser
@@ -107,7 +107,7 @@ class HomeFragment : Fragment() {
                     startActivity(intent)
                     binding.slider.resetSlider()
                 } else {
-                    Toast.makeText(requireActivity(), "Please upload your prescription in settings tab", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireActivity(), "Results of Your MRI Results are yet to come\nEven You upload your MRI image in settings tab", Toast.LENGTH_SHORT).show()
                     binding.slider.resetSlider()
                 }
 
@@ -118,21 +118,6 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
-    private fun TSS() {
-        val pg= 6.9
-        binding.circularProgressBar.apply {
-            setProgressWithAnimation(pg.toFloat(), 1000)
-            progressMax = 10f
-
-            roundBorder = true
-        }
-        binding.circularProgressBar.onProgressChangeListener = {
-            val df = DecimalFormat()
-            df.maximumFractionDigits = 1
-            binding.textprogress.text = "Total Social\nScore\n(${df.format(it)}/10)"
-            // Do something
-        }
-    }
 
     private fun doctorIsPresent() {
 

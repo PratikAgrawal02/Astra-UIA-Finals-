@@ -11,9 +11,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.pratik.happyscore.databinding.ActivityAddPrescriptionBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
@@ -57,10 +59,10 @@ class AddPrescriptionActivity : AppCompatActivity() {
                 .withListener(object : PermissionListener {
                     override fun onPermissionGranted(permissionGrantedResponse: PermissionGrantedResponse) {
                         val intent = Intent()
-                        intent.type = "application/pdf"
+                        intent.type = "image/*"
                         intent.action = Intent.ACTION_GET_CONTENT
                         startActivityForResult(
-                            Intent.createChooser(intent, "Select Pdf Files"),
+                            Intent.createChooser(intent, "Select jpg Files"),
                             101
                         )
                     }
@@ -88,6 +90,7 @@ class AddPrescriptionActivity : AppCompatActivity() {
             assert(data != null)
             fileUri = data?.data!!
             binding.filelogo.visibility = View.VISIBLE
+            binding.filelogo.setImageURI(fileUri)
             binding.cancelfile.visibility = View.VISIBLE
             binding.imagebrowse.visibility = View.INVISIBLE
         }
@@ -102,10 +105,11 @@ class AddPrescriptionActivity : AppCompatActivity() {
             Toast.makeText(baseContext, "Add file title", Toast.LENGTH_SHORT).show()
         }else{
             val pd = ProgressDialog(this)
-            pd.setTitle("Uploading PDF")
+            pd.setTitle("Uploading MRI Image")
             pd.show()
 
-            val reference: StorageReference = FirebaseStorage.getInstance().reference.child("uploads/" + System.currentTimeMillis() + ".pdf")
+            val reference: StorageReference = FirebaseStorage.getInstance().reference.child("uploads/" + FirebaseAuth.getInstance().uid.toString() + ".jpg")
+
             reference.putFile(fileUri).addOnSuccessListener { taskSnapshot: UploadTask.TaskSnapshot? -> reference.downloadUrl.addOnSuccessListener { uri: Uri ->
                         val editor = sharedPreference.edit()
                         editor.putString("prescription", uri.toString())

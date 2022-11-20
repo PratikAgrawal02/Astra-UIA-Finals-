@@ -71,47 +71,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textprogress"
-            android:fontFamily="@font/poppins_bold"
-            android:text="Total Social\nScore\n(6.9/10)"
-            android:textColor="@color/light_blue"
-            android:textSize="17sp"
-            android:gravity="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/circularProgressBar"
-            app:layout_constraintTop_toTopOf="@id/circularProgressBar" />
-        <com.mikhaellopez.circularprogressbar.CircularProgressBar
-            android:id="@+id/circularProgressBar"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            app:cpb_background_progressbar_color="@color/grey"
-            app:cpb_background_progressbar_width="5dp"
-            app:cpb_progress_direction="to_right"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="10dp"
-            app:cpb_progressbar_color="@color/light_blue"
-            app:cpb_progressbar_width="10dp"
-            app:cpb_round_border="false" />
 
         <LinearLayout
             android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="60dp"
             android:orientation="vertical"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/circularProgressBar" >
+            app:layout_constraintTop_toTopOf="parent" >
 
             <TextView
                 android:id="@+id/textView2"
@@ -130,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans"
                 android:layout_marginTop="10dp"
-                android:text="Enter the Expert's name, email or phone"
+                android:text="Enter the Doctor's name, email or phone"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 tools:layout_editor_absoluteX="32dp"
@@ -194,7 +166,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/dm_sans_medium"
-                    android:text="Expert Found!"
+                    android:text="Doctor Found!"
                     android:textColor="@color/light_blue"
                     android:textSize="20dp" />
 
@@ -246,7 +218,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="Expert Not Found!"
+            android:text="Doctor Not Found!"
             android:textColor="@color/black"
             android:textSize="25dp"
             android:visibility="gone"

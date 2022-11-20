@@ -97,7 +97,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/dm_sans_medium"
-                                android:text="Blood Pressure"
+                                android:text="RBC"
                                 android:textSize="17dp"
                                 android:textColor="@color/black"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -142,7 +142,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/dm_sans_medium"
-                                android:text="Biological Reference: 80-120"
+                                android:text="Adult Male:3.9-5.6 M/L\nAdult Female:4.5 to 6.5M/L"
                                 android:textSize="12dp"
                                 android:textColor="@color/black"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -192,7 +192,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/dm_sans_medium"
-                                android:text="Sugar Fasting"
+                                android:text="Hemoglobin"
                                 android:textSize="17dp"
                                 android:textColor="@color/black"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -235,7 +235,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/dm_sans_medium"
-                                android:text="Biological Reference: 70-100"
+                                android:text="Adult Male:115-160 M/L\nAdult Female:4.5 to 6.5M/L"
                                 android:textSize="12dp"
                                 android:textColor="@color/black"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -285,7 +285,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/dm_sans_medium"
-                                android:text="Sugar PP"
+                                android:text="WBC"
                                 android:textSize="17dp"
                                 android:textColor="@color/black"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -328,9 +328,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/dm_sans_medium"
-                                android:text="Biological Reference: 80-120"
+                                android:text="Biological Reference:\n 4-11 Giga/L"
                                 android:textSize="12dp"
+                                android:fontFamily="@font/dm_sans_medium"
                                 android:textColor="@color/black"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -355,14 +355,12 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginBottom="100dp"
                     android:background="@drawable/cardview_background"
                     android:backgroundTint="@color/white">
 
@@ -381,7 +379,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/dm_sans_medium"
-                                android:text="Cholesterol"
+                                android:text="Lymphocytes"
                                 android:textSize="17dp"
                                 android:textColor="@color/black"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -424,7 +422,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/dm_sans_medium"
-                                android:text="Cholesterol"
+                                android:text="Biological Reference:\n1-4.5 Giga/L"
+                                android:textSize="12dp"
+
                                 android:textColor="@color/black"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -437,6 +437,377 @@
                                 android:fontFamily="@font/dm_sans_medium"
                                 android:text="Min: Loading, Max: Loading"
                                 android:paddingRight="10dp"
+                                android:textSize="12dp"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/cardview_background"
+                    android:backgroundTint="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        tools:ignore="RtlHardcoded">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Platelets"
+                                android:textSize="17dp"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/addPlateletsData"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Add data"
+                                android:background="@drawable/primary_button"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:textAllCaps="false"
+                                android:textSize="12dp"
+                                android:textColor="@color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.majorik.sparklinelibrary.SparkLineLayout
+                            android:id="@+id/platelets"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#ffffff"
+                            app:s_gradient_line="true"
+                            app:s_line_color="@color/light_blue"
+                            app:s_line_second_color="@color/dull_blue"
+                            app:s_line_thickness="4dp" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Biological Reference:\n15-400 Giga/L"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/plateleteRange"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Min: 0, Max: 0"
+                                android:paddingRight="10dp"
+                                android:textSize="12dp"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/cardview_background"
+                    android:backgroundTint="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        tools:ignore="RtlHardcoded">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Alanine aminotransferase"
+                                android:textSize="17dp"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/addaltData"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Add data"
+                                android:background="@drawable/primary_button"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:textAllCaps="false"
+                                android:textSize="12dp"
+                                android:textColor="@color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.majorik.sparklinelibrary.SparkLineLayout
+                            android:id="@+id/alt"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#ffffff"
+                            app:s_gradient_line="true"
+                            app:s_line_color="@color/light_blue"
+                            app:s_line_second_color="@color/dull_blue"
+                            app:s_line_thickness="4dp" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Biological Reference:\n4 to 36 U/L"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/altRange"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Min: 0, Max: 0"
+                                android:paddingRight="10dp"
+                                android:textSize="12dp"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/cardview_background"
+                    android:backgroundTint="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        tools:ignore="RtlHardcoded">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Aspartate aminotransferase"
+                                android:textSize="15dp"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/addastData"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Add data"
+                                android:background="@drawable/primary_button"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:textAllCaps="false"
+                                android:textSize="12dp"
+                                android:textColor="@color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.majorik.sparklinelibrary.SparkLineLayout
+                            android:id="@+id/ast"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#ffffff"
+                            app:s_gradient_line="true"
+                            app:s_line_color="@color/light_blue"
+                            app:s_line_second_color="@color/dull_blue"
+                            app:s_line_thickness="4dp" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Biological Reference:\n8 to 33 U/L"
+                                android:textSize="12dp"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/astRange"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Min: 0, Max: 0"
+                                android:paddingRight="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="12dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="100dp"
+                    android:background="@drawable/cardview_background"
+                    android:backgroundTint="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        tools:ignore="RtlHardcoded">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Alkaline phosphatas"
+                                android:textSize="17dp"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/addalpData"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Add data"
+                                android:background="@drawable/primary_button"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:textAllCaps="false"
+                                android:textSize="12dp"
+                                android:textColor="@color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.majorik.sparklinelibrary.SparkLineLayout
+                            android:id="@+id/alp"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#ffffff"
+                            app:s_gradient_line="true"
+                            app:s_line_color="@color/light_blue"
+                            app:s_line_second_color="@color/dull_blue"
+                            app:s_line_thickness="4dp" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Biological Reference:\n44 to 147 IU/L"
+                                android:textSize="12dp"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/alpRange"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Min: 0, Max: 0"
+                                android:paddingRight="10dp"
+                                android:textSize="12dp"
                                 android:textColor="@color/black"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"

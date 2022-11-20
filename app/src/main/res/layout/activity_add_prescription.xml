@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="Add Prescription"
+            android:text="Upload MRI Scan"
             android:textColor="@color/white"
             android:textSize="35sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,7 @@
             android:background="@drawable/button"
             android:fontFamily="@font/dm_sans"
             android:stateListAnimator="@null"
-            android:text="Select Prescription"
+            android:text="Select Scan"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -102,8 +102,8 @@
 
         <ImageView
             android:id="@+id/filelogo"
-            android:layout_width="152dp"
-            android:layout_height="162dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
             android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/filetitle"
             app:layout_constraintEnd_toEndOf="parent"

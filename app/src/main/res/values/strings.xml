@@ -10,6 +10,12 @@
     <string name="disease_name">Disease Name</string>
     <string name="specialization"> Specialization</string>
     <string name="situation">Situation</string>
+    <string name="home_tag">Be a health care hero</string>
+    <string name="symptom_tagline">Every time you update your symptoms there is an opportunity to learn more about various Tumors and symptom correlation. It only takes a few minutes a day to empower yourself as a patient and become a part of the solution.</string>
+    <string name="No_Tumor">You do not show any sign of Tumor</string>
+    <string name="dangerous_tumor">You have high chances of Tumor, please follow a Neurologist</string>
+    <string name="see_a_doctor">Please see a doctor or book a appointment from app itself </string>
+    <string name="tumor_detected">You have been diagnosed with Brain Tumor , please stick to prescription given by a Neurologist</string>
     <string-array name="dropdown_items">
         <item>Fever</item>
         <item>Cold</item>
